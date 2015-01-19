@@ -3,14 +3,28 @@ BASE_DIR = Path(__file__).ancestor(3)
 
 SECRET_KEY = 'b@77aq6jj!!y7*0zz6n5yt&&#w1%hqhyrb$l@w6md8drc+s(9m'
 
-INSTALLED_APPS = (
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-)
+DJANGO_APPS = (
+        'django.contrib.admin',
+        'django.contrib.auth',
+        'django.contrib.contenttypes',
+        'django.contrib.sessions',
+        'django.contrib.messages',
+        'django.contrib.staticfiles',
+
+    )
+
+THIRD_PARTY_APPS = (
+        'south',
+
+    )
+
+LOCAL_APPS = (
+    'apps.home',
+
+    )
+
+
+INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
